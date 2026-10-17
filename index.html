@@ -1,520 +1,714 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>گیلانا | کارگاه سفالگری و سرامیک دست‌ساز تالش</title>
-
-  <meta name="description" content="کارگاه سفالگری گیلانا در تالش، گیلان. ساخت ظروف سرامیکی دست‌ساز. مشاهده آثار و ارتباط مستقیم برای سفارش.">
-
-  <meta name="theme-color" content="#596747">
-
-  <style>
-    :root {
-      --olive: #596747;
-      --dark-olive: #354331;
-      --cream: #F5F0E5;
-      --white: #FFFCF6;
-      --henna: #AD674B;
-      --text: #292D25;
-      --muted: #626458;
-      --border: #D9D3C5;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: var(--cream);
-      color: var(--text);
-      font-family: Tahoma, Arial, sans-serif;
-      line-height: 2;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    .container {
-      width: min(1080px, 90%);
-      margin: auto;
-    }
-
-    /* نوار بالای سایت */
-
-    .topbar {
-      background: var(--dark-olive);
-      color: var(--white);
-      padding: 12px 0;
-      text-align: center;
-      font-size: 14px;
-      font-weight: 900;
-    }
-
-    /* سربرگ */
-
-    header {
-      padding: 25px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      font-size: 34px;
-      font-weight: 900;
-      color: var(--dark-olive);
-      direction: ltr;
-    }
-
-    .brand span,
-    .footer-brand span {
-      color: var(--henna);
-    }
-
-    nav {
-      display: flex;
-      gap: 22px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 900;
-    }
-
-    nav a:hover {
-      color: var(--henna);
-    }
-
-    /* بخش اصلی */
-
-    .hero {
-      background: var(--olive);
-      color: var(--white);
-      padding: 80px 0;
-    }
-
-    .hero-inner {
-      max-width: 850px;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      color: #F1C5A8;
-      font-size: 14px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      margin-bottom: 15px;
-    }
-
-    .hero h1 {
-      font-size: clamp(36px, 6vw, 62px);
-      line-height: 1.6;
-      margin: 0 0 15px;
-      font-weight: 900;
-    }
-
-    .hero h1 span {
-      color: #F1C5A8;
-    }
-
-    .hero p {
-      font-size: clamp(17px, 2.5vw, 21px);
-      font-weight: bold;
-      max-width: 650px;
-      margin: 0 0 28px;
-      color: #F6F1E7;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 13px 23px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: 900;
-      font-size: 15px;
-      text-align: center;
-    }
-
-    .button-light {
-      background: var(--cream);
-      color: var(--dark-olive);
-    }
-
-    .button-outline {
-      border: 2px solid var(--cream);
-      color: var(--cream);
-    }
-
-    .button:hover {
-      opacity: 0.85;
-    }
-
-    /* معرفی کارگاه */
-
-    .intro {
-      padding: 65px 0;
-    }
-
-    .section-title {
-      font-size: clamp(28px, 4vw, 38px);
-      font-weight: 900;
-      color: var(--dark-olive);
-      margin: 0 0 15px;
-      line-height: 1.7;
-    }
-
-    .title-line {
-      width: 65px;
-      height: 6px;
-      background: var(--henna);
-      margin-bottom: 24px;
-      border-radius: 3px;
-    }
-
-    .intro p {
-      max-width: 750px;
-      font-size: 17px;
-      font-weight: bold;
-      color: var(--muted);
-      margin: 0;
-    }
-
-    /* اطلاعات تماس */
-
-    .contact-section {
-      background: #E9E1D2;
-      padding: 65px 0;
-    }
-
-    .contact-heading {
-      margin-bottom: 30px;
-    }
-
-    .contact-heading p {
-      font-size: 17px;
-      font-weight: bold;
-      color: var(--muted);
-      margin-top: 0;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .contact-card {
-      background: var(--white);
-      padding: 28px;
-      border-right: 6px solid var(--olive);
-      border-radius: 6px;
-      min-width: 0;
-    }
-
-    .contact-card.phone {
-      border-right-color: var(--henna);
-    }
-
-    .contact-label {
-      display: block;
-      color: var(--muted);
-      font-size: 16px;
-      font-weight: 900;
-      margin-bottom: 8px;
-    }
-
-    .contact-value {
-      display: block;
-      color: var(--dark-olive);
-      font-size: clamp(20px, 3vw, 27px);
-      font-weight: 900;
-      overflow-wrap: anywhere;
-      line-height: 1.9;
-    }
-
-    .contact-note {
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: bold;
-      margin: 10px 0 0;
-    }
-
-    .contact-card a {
-      text-decoration: none;
-    }
-
-    .contact-card a:hover {
-      color: var(--henna);
-    }
-
-    /* اینستاگرام */
-
-    .instagram-card {
-      margin-top: 22px;
-      background: var(--dark-olive);
-      color: var(--white);
-      padding: 27px;
-      border-radius: 6px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .instagram-card h3 {
-      font-size: 23px;
-      font-weight: 900;
-      margin: 0;
-    }
-
-    .instagram-card p {
-      margin: 5px 0 0;
-      font-weight: bold;
-    }
-
-    .instagram-card .button {
-      background: var(--henna);
-      color: white;
-    }
-
-    /* پایین سایت */
-
-    footer {
-      background: var(--dark-olive);
-      color: var(--cream);
-      padding: 25px 0;
-      text-align: center;
-    }
-
-    footer p {
-      margin: 4px 0;
-      font-weight: bold;
-    }
-
-    .footer-brand {
-      font-size: 25px;
-      font-weight: 900;
-      direction: ltr;
-    }
-
-    /* نمایش در گوشی */
-
-    @media (max-width: 650px) {
-      .header-inner {
-        justify-content: center;
-        text-align: center;
-      }
-
-      .brand {
-        font-size: 32px;
-      }
-
-      nav {
-        justify-content: center;
-        gap: 17px;
-      }
-
-      .hero {
-        padding: 55px 0;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-card {
-        padding: 23px;
-      }
-
-      .instagram-card {
-        align-items: flex-start;
-      }
-
-      .intro,
-      .contact-section {
-        padding: 48px 0;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gilana | Pottery Studio & Workshops</title>
+
+<meta name="description" content="کارگاه سفالگری گیلانا در تالش، گیلان؛ ساخت آثار سفالی، آموزش سفالگری و برگزاری دوره‌ها و ورکشاپ‌های هنری.">
+
+<style>
+:root {
+  --olive: #596747;
+  --dark: #354331;
+  --cream: #F5F0E5;
+  --white: #FFFCF6;
+  --henna: #AD674B;
+  --text: #292D25;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 2;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin: auto;
+}
+
+/* TOP BAR */
+
+.topbar {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 9px 15px;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* HEADER */
+
+header {
+  padding: 20px 0;
+  background: var(--cream);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-size: 35px;
+  font-weight: 900;
+  direction: ltr;
+  color: var(--dark);
+  line-height: 1.3;
+}
+
+.brand span {
+  color: var(--henna);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+nav a:hover {
+  color: var(--henna);
+}
+
+.nav-instagram {
+  background: var(--olive);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--olive);
+  color: white;
+  min-height: 510px;
+  display: flex;
+  align-items: center;
+  padding: 70px 0;
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 290px;
+  height: 390px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-size: cover;
+  background-position: center;
+  border-radius: 150px 150px 8px 8px;
+  opacity: 0.65;
+  border: 5px solid rgba(245,240,229,0.55);
+}
+
+.hero::before {
+  left: 4%;
+  background-image:
+    url("https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=700&q=85");
+}
+
+.hero::after {
+  right: 4%;
+  background-image:
+    url("https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?auto=format&fit=crop&w=700&q=85");
+}
+
+.hero-content {
+  width: min(690px, 90%);
+  margin: auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  color: #F1C5A8;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 5vw, 60px);
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 15px 0;
+}
+
+.hero h1 span {
+  color: #F1C5A8;
+}
+
+.hero p {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: bold;
+  max-width: 620px;
+  margin: 0 auto 25px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 22px;
+  font-weight: 900;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-light {
+  background: var(--cream);
+  color: var(--dark);
+}
+
+.button-outline {
+  border: 2px solid var(--cream);
+  color: white;
+}
+
+/* GENERAL SECTIONS */
+
+section.content-section {
+  padding: 75px 0;
+}
+
+.section-heading {
+  font-size: clamp(27px, 4vw, 39px);
+  font-weight: 900;
+  line-height: 1.5;
+  color: var(--dark);
+  margin: 0 0 10px;
+}
+
+.section-subtitle {
+  color: #68685D;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 30px;
+}
+
+.heading-line {
+  height: 6px;
+  width: 65px;
+  background: var(--henna);
+  border-radius: 4px;
+  margin: 15px 0 25px;
+}
+
+/* ABOUT */
+
+.about-section {
+  background: var(--cream);
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 45px;
+}
+
+.about-text p {
+  font-size: 17px;
+  font-weight: bold;
+  color: #626458;
+}
+
+.about-photo {
+  min-height: 360px;
+  border-radius: 160px 160px 5px 5px;
+  background:
+    linear-gradient(
+      0deg,
+      rgba(53,67,49,0.08),
+      rgba(53,67,49,0.08)
+    ),
+    url("https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=900&q=85");
+  background-position: center;
+  background-size: cover;
+  border: 7px solid var(--white);
+}
+
+/* CLASSES */
+
+.classes-section {
+  background: #E9E1D2;
+}
+
+.classes-header {
+  max-width: 700px;
+  margin-bottom: 35px;
+}
+
+.classes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.class-card {
+  background: var(--white);
+  padding: 30px 25px;
+  border-top: 6px solid var(--olive);
+  border-radius: 4px;
+}
+
+.class-card:nth-child(2) {
+  border-top-color: var(--henna);
+}
+
+.class-card:nth-child(3) {
+  border-top-color: var(--dark);
+}
+
+.class-number {
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--henna);
+  letter-spacing: 2px;
+}
+
+.class-card h3 {
+  color: var(--dark);
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.7;
+  margin: 10px 0;
+}
+
+.class-card p {
+  color: #626458;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.class-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--henna);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+/* CONTACT */
+
+.contact-section {
+  background: var(--dark);
+  color: white;
+}
+
+.contact-section .section-heading {
+  color: var(--cream);
+}
+
+.contact-section .section-subtitle {
+  color: #E3E2D8;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.contact-card {
+  background: var(--cream);
+  color: var(--dark);
+  padding: 28px;
+  border-right: 7px solid var(--henna);
+  border-radius: 4px;
+  min-width: 0;
+}
+
+.contact-card.address {
+  border-right-color: var(--olive);
+}
+
+.contact-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 900;
+  color: #68685D;
+  letter-spacing: 1.5px;
+  direction: ltr;
+  text-align: right;
+}
+
+.contact-value {
+  display: block;
+  font-size: clamp(22px, 3vw, 29px);
+  font-weight: 900;
+  margin-top: 7px;
+  overflow-wrap: anywhere;
+  line-height: 1.8;
+}
+
+.contact-note {
+  font-size: 14px;
+  font-weight: bold;
+  color: #626458;
+  margin-bottom: 0;
+}
+
+.contact-value.phone-number {
+  direction: ltr;
+  text-align: right;
+  text-decoration: none;
+}
+
+/* FOOTER */
+
+footer {
+  background: #273326;
+  color: var(--cream);
+  text-align: center;
+  padding: 25px 15px;
+}
+
+.footer-brand {
+  font-size: 28px;
+  font-weight: 900;
+  direction: ltr;
+}
+
+.footer-brand span {
+  color: #D59A78;
+}
+
+footer p {
+  font-weight: bold;
+  margin: 4px 0;
+  font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+  .hero::before,
+  .hero::after {
+    width: 190px;
+    height: 270px;
+    opacity: 0.25;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo {
+    min-height: 300px;
+    max-width: 520px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .classes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-inner {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 13px;
+  }
+
+  .brand {
+    font-size: 31px;
+  }
+
+  .hero {
+    min-height: 480px;
+    padding: 60px 0;
+  }
+
+  .hero::before,
+  .hero::after {
+    width: 135px;
+    height: 200px;
+    opacity: 0.17;
+  }
+
+  .hero::before {
+    left: -35px;
+  }
+
+  .hero::after {
+    right: -35px;
+  }
+
+  section.content-section {
+    padding: 50px 0;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    padding: 23px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <div class="topbar">
-    کارگاه سفالگری گیلانا | گیلان، تالش
+<div class="topbar">
+  GILANA POTTERY STUDIO · TALESH, GILAN
+</div>
+
+<header>
+  <div class="container header-inner">
+
+    <div class="brand">gilaa<span>.na</span></div>
+
+    <nav>
+      <a href="#about">About the Studio</a>
+      <a href="#classes">Classes & Workshops</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-instagram"
+         href="https://www.instagram.com/gilaa.na/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Instagram ↗
+      </a>
+    </nav>
+
   </div>
+</header>
 
-  <header>
-    <div class="container header-inner">
+<main>
 
-      <div class="brand">
-        gilaa<span>.na</span>
+  <section class="hero">
+    <div class="hero-content">
+
+      <div class="eyebrow">GILANA POTTERY STUDIO</div>
+
+      <h1>
+        کارگاه سفالگری
+        <br>
+        <span>گیلانا</span>
+      </h1>
+
+      <p>
+        ساخت آثار سفالی، آموزش سفالگری،
+        برگزاری دوره‌ها و ورکشاپ‌های هنری
+        در تالش، گیلان.
+      </p>
+
+      <div class="buttons">
+        <a class="button button-light" href="#classes">
+          دوره‌ها و ورکشاپ‌ها
+        </a>
+
+        <a class="button button-outline" href="#contact">
+          اطلاعات تماس
+        </a>
       </div>
-
-      <nav>
-        <a href="#about">درباره کارگاه</a>
-        <a href="#contact">آدرس و تماس</a>
-        <a href="https://www.instagram.com/gilaa.na/"
-           target="_blank"
-           rel="noopener noreferrer">اینستاگرام</a>
-      </nav>
 
     </div>
-  </header>
+  </section>
 
-  <main>
+  <section class="content-section about-section" id="about">
+    <div class="container about-layout">
 
-    <section class="hero">
-      <div class="container hero-inner">
+      <div class="about-text">
 
-        <span class="eyebrow">GILANA POTTERY WORKSHOP</span>
-
-        <h1>
-          هنر سفال،
-          <br>
-          <span>ساخته‌شده با دست</span>
-        </h1>
-
-        <p>
-          کارگاه سفالگری گیلانا در تالش، گیلان؛
-          ساخت ظروف سرامیکی دست‌ساز با الهام از سادگی،
-          طبیعت و زیبایی.
-        </p>
-
-        <div class="buttons">
-
-          <a class="button button-light" href="#contact">
-            آدرس و شماره تماس
-          </a>
-
-          <a class="button button-outline"
-             href="https://www.instagram.com/gilaa.na/"
-             target="_blank"
-             rel="noopener noreferrer">
-            مشاهده آثار در اینستاگرام
-          </a>
-
+        <div class="eyebrow" style="color:var(--henna)">
+          OUR STUDIO
         </div>
 
-      </div>
-    </section>
+        <h2 class="section-heading">About the Studio</h2>
 
-    <section class="intro" id="about">
-      <div class="container">
-
-        <h2 class="section-title">درباره کارگاه گیلانا</h2>
-        <div class="title-line"></div>
+        <div class="heading-line"></div>
 
         <p>
-          گیلانا کارگاه سفالگری و ساخت ظروف سرامیکی دست‌ساز است.
-          هر اثر با توجه به فرم، جزئیات و زیبایی طراحی و ساخته می‌شود.
-          برای مشاهده آثار و آشنایی بیشتر با محصولات کارگاه،
-          صفحه اینستاگرام گیلانا را دنبال کنید.
+          گیلانا یک کارگاه سفالگری و سرامیک در تالش، گیلان است؛
+          فضایی برای خلق آثار سفالی، آشنایی با هنر سفالگری
+          و تجربه کار با گل.
+        </p>
+
+        <p>
+          فعالیت‌های کارگاه شامل ساخت ظروف سرامیکی،
+          آموزش سفالگری و برگزاری دوره‌ها و ورکشاپ‌های هنری است.
         </p>
 
       </div>
-    </section>
 
-    <section class="contact-section" id="contact">
-      <div class="container">
+      <div class="about-photo" role="img"
+           aria-label="تصویر آثار سفالی و سرامیکی"></div>
 
-        <div class="contact-heading">
-          <h2 class="section-title">آدرس و اطلاعات تماس</h2>
-          <div class="title-line"></div>
+    </div>
+  </section>
 
+  <section class="content-section classes-section" id="classes">
+    <div class="container">
+
+      <div class="classes-header">
+
+        <div class="eyebrow" style="color:var(--henna)">
+          LEARN · CREATE · EXPLORE
+        </div>
+
+        <h2 class="section-heading">
+          آموزش و تجربه سفالگری
+        </h2>
+
+        <div class="heading-line"></div>
+
+        <p class="section-subtitle">
+          از یادگیری هنر سفال تا تجربه خلق اثر با دستان خودت.
+        </p>
+
+      </div>
+
+      <div class="classes-grid">
+
+        <article class="class-card">
+          <div class="class-number">01 / LEARN</div>
+          <h3>آموزش سفالگری</h3>
           <p>
-            برای هماهنگی سفارش یا مراجعه به کارگاه،
-            از اطلاعات زیر استفاده کنید.
+            آشنایی با گل، فرم‌دهی و مراحل ساخت آثار سفالی.
+          </p>
+          <a class="class-link" href="#contact">
+            اطلاعات بیشتر ←
+          </a>
+        </article>
+
+        <article class="class-card">
+          <div class="class-number">02 / WORKSHOPS</div>
+          <h3>ورکشاپ‌های سفالگری</h3>
+          <p>
+            تجربه عملی کار با گل و آشنایی با فرایند ساخت یک اثر.
+          </p>
+          <a class="class-link" href="#contact">
+            هماهنگی و ثبت‌نام ←
+          </a>
+        </article>
+
+        <article class="class-card">
+          <div class="class-number">03 / COURSES</div>
+          <h3>دوره‌های هنری</h3>
+          <p>
+            دوره‌ها و برنامه‌های آموزشی سفالگری متناسب با
+            برنامه کارگاه برگزار می‌شوند.
+          </p>
+          <a class="class-link" href="#contact">
+            پرسش درباره دوره‌ها ←
+          </a>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="content-section contact-section" id="contact">
+    <div class="container">
+
+      <div class="eyebrow" style="color:#F1C5A8">
+        GET IN TOUCH
+      </div>
+
+      <h2 class="section-heading">Contact & Location</h2>
+
+      <div class="heading-line"></div>
+
+      <p class="section-subtitle">
+        برای سفارش آثار، اطلاع از دوره‌ها و هماهنگی ورکشاپ‌ها
+        با کارگاه گیلانا در ارتباط باشید.
+      </p>
+
+      <div class="contact-grid">
+
+        <div class="contact-card address">
+          <span class="contact-label">ADDRESS</span>
+
+          <span class="contact-value">
+            گیلان، تالش
+          </span>
+
+          <p class="contact-note">
+            برای هماهنگی مراجعه حضوری، لطفاً از قبل تماس بگیرید.
           </p>
         </div>
 
-        <div class="contact-grid">
+        <div class="contact-card">
+          <span class="contact-label">PHONE</span>
 
-          <div class="contact-card">
-            <span class="contact-label">آدرس کارگاه</span>
-
-            <span class="contact-value">
-              گیلان، تالش
-            </span>
-
-            <p class="contact-note">
-              برای دریافت نشانی دقیق و هماهنگی مراجعه، تماس بگیرید.
-            </p>
-          </div>
-
-          <div class="contact-card phone">
-            <span class="contact-label">شماره تماس</span>
-
-            <a class="contact-value"
-               href="tel:09113446314"
-               dir="ltr">
-              09113446314
-            </a>
-
-            <p class="contact-note">
-              برای ارتباط مستقیم با کارگاه تماس بگیرید.
-            </p>
-          </div>
-
-        </div>
-
-        <div class="instagram-card">
-
-          <div>
-            <h3>گیلانا در اینستاگرام</h3>
-            <p>مشاهده ظروف دست‌ساز و آثار جدید کارگاه</p>
-          </div>
-
-          <a class="button"
-             href="https://www.instagram.com/gilaa.na/"
-             target="_blank"
-             rel="noopener noreferrer">
-            @gilaa.na
+          <a class="contact-value phone-number"
+             href="tel:09113446314">
+            09113446314
           </a>
 
+          <p class="contact-note">
+            تماس برای سفارش، آموزش و ثبت‌نام ورکشاپ‌ها
+          </p>
         </div>
 
       </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="container">
-
-      <div class="footer-brand">
-        gilaa<span>.na</span>
-      </div>
-
-      <p>کارگاه سفالگری گیلانا</p>
-      <p>گیلان، تالش</p>
-      <p>هنر دست، زیبایی ماندگار</p>
 
     </div>
-  </footer>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-brand">gilaa<span>.na</span></div>
+  <p>کارگاه سفالگری گیلانا · گیلان، تالش</p>
+  <p>Pottery · Education · Workshops</p>
+</footer>
 
 </body>
 </html>
