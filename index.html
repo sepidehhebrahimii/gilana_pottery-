@@ -4,101 +4,517 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>کارگاه سفالگری گیلانا | Gilana Pottery</title>
+  <title>گیلانا | کارگاه سفالگری و سرامیک دست‌ساز تالش</title>
 
-  <meta name="description" content="کارگاه سفالگری گیلانا؛ ساخت ظروف سرامیکی دست‌ساز با طراحی ساده و منحصربه‌فرد.">
+  <meta name="description" content="کارگاه سفالگری گیلانا در تالش، گیلان. ساخت ظروف سرامیکی دست‌ساز. مشاهده آثار و ارتباط مستقیم برای سفارش.">
+
+  <meta name="theme-color" content="#596747">
 
   <style>
+    :root {
+      --olive: #596747;
+      --dark-olive: #354331;
+      --cream: #F5F0E5;
+      --white: #FFFCF6;
+      --henna: #AD674B;
+      --text: #292D25;
+      --muted: #626458;
+      --border: #D9D3C5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Tahoma, sans-serif;
-      background-color: #f7f2e8;
-      color: #354b38;
+      background: var(--cream);
+      color: var(--text);
+      font-family: Tahoma, Arial, sans-serif;
       line-height: 2;
     }
 
-    header {
-      background-color: #526b50;
-      color: white;
-      text-align: center;
-      padding: 45px 20px;
+    a {
+      color: inherit;
     }
 
-    header h1 {
-      font-size: 32px;
+    .container {
+      width: min(1080px, 90%);
+      margin: auto;
+    }
+
+    /* نوار بالای سایت */
+
+    .topbar {
+      background: var(--dark-olive);
+      color: var(--white);
+      padding: 12px 0;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    /* سربرگ */
+
+    header {
+      padding: 25px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 34px;
+      font-weight: 900;
+      color: var(--dark-olive);
+      direction: ltr;
+    }
+
+    .brand span,
+    .footer-brand span {
+      color: var(--henna);
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    nav a:hover {
+      color: var(--henna);
+    }
+
+    /* بخش اصلی */
+
+    .hero {
+      background: var(--olive);
+      color: var(--white);
+      padding: 80px 0;
+    }
+
+    .hero-inner {
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: #F1C5A8;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 62px);
+      line-height: 1.6;
+      margin: 0 0 15px;
+      font-weight: 900;
+    }
+
+    .hero h1 span {
+      color: #F1C5A8;
+    }
+
+    .hero p {
+      font-size: clamp(17px, 2.5vw, 21px);
+      font-weight: bold;
+      max-width: 650px;
+      margin: 0 0 28px;
+      color: #F6F1E7;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 23px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    .button-light {
+      background: var(--cream);
+      color: var(--dark-olive);
+    }
+
+    .button-outline {
+      border: 2px solid var(--cream);
+      color: var(--cream);
+    }
+
+    .button:hover {
+      opacity: 0.85;
+    }
+
+    /* معرفی کارگاه */
+
+    .intro {
+      padding: 65px 0;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 4vw, 38px);
+      font-weight: 900;
+      color: var(--dark-olive);
+      margin: 0 0 15px;
+      line-height: 1.7;
+    }
+
+    .title-line {
+      width: 65px;
+      height: 6px;
+      background: var(--henna);
+      margin-bottom: 24px;
+      border-radius: 3px;
+    }
+
+    .intro p {
+      max-width: 750px;
+      font-size: 17px;
+      font-weight: bold;
+      color: var(--muted);
       margin: 0;
     }
 
-    header p {
-      margin-top: 10px;
+    /* اطلاعات تماس */
+
+    .contact-section {
+      background: #E9E1D2;
+      padding: 65px 0;
     }
 
-    main {
-      max-width: 750px;
-      margin: 35px auto;
-      padding: 25px;
+    .contact-heading {
+      margin-bottom: 30px;
     }
 
-    section {
-      background-color: white;
-      padding: 25px;
-      border-radius: 12px;
-      margin-bottom: 25px;
+    .contact-heading p {
+      font-size: 17px;
+      font-weight: bold;
+      color: var(--muted);
+      margin-top: 0;
     }
 
-    h2 {
-      color: #526b50;
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
     }
 
-    a {
-      color: #526b50;
+    .contact-card {
+      background: var(--white);
+      padding: 28px;
+      border-right: 6px solid var(--olive);
+      border-radius: 6px;
+      min-width: 0;
+    }
+
+    .contact-card.phone {
+      border-right-color: var(--henna);
+    }
+
+    .contact-label {
+      display: block;
+      color: var(--muted);
+      font-size: 16px;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .contact-value {
+      display: block;
+      color: var(--dark-olive);
+      font-size: clamp(20px, 3vw, 27px);
+      font-weight: 900;
+      overflow-wrap: anywhere;
+      line-height: 1.9;
+    }
+
+    .contact-note {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: bold;
+      margin: 10px 0 0;
+    }
+
+    .contact-card a {
+      text-decoration: none;
+    }
+
+    .contact-card a:hover {
+      color: var(--henna);
+    }
+
+    /* اینستاگرام */
+
+    .instagram-card {
+      margin-top: 22px;
+      background: var(--dark-olive);
+      color: var(--white);
+      padding: 27px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .instagram-card h3 {
+      font-size: 23px;
+      font-weight: 900;
+      margin: 0;
+    }
+
+    .instagram-card p {
+      margin: 5px 0 0;
       font-weight: bold;
     }
 
-    footer {
-      background-color: #526b50;
+    .instagram-card .button {
+      background: var(--henna);
       color: white;
+    }
+
+    /* پایین سایت */
+
+    footer {
+      background: var(--dark-olive);
+      color: var(--cream);
+      padding: 25px 0;
       text-align: center;
-      padding: 18px;
+    }
+
+    footer p {
+      margin: 4px 0;
+      font-weight: bold;
+    }
+
+    .footer-brand {
+      font-size: 25px;
+      font-weight: 900;
+      direction: ltr;
+    }
+
+    /* نمایش در گوشی */
+
+    @media (max-width: 650px) {
+      .header-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .brand {
+        font-size: 32px;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 17px;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        padding: 23px;
+      }
+
+      .instagram-card {
+        align-items: flex-start;
+      }
+
+      .intro,
+      .contact-section {
+        padding: 48px 0;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>کارگاه سفالگری گیلانا</h1>
-  <p>Gilana Pottery Workshop</p>
-  <p>ساخت ظروف سرامیکی دست‌ساز</p>
-</header>
+  <div class="topbar">
+    کارگاه سفالگری گیلانا | گیلان، تالش
+  </div>
 
-<main>
-  <section>
-    <h2>درباره کارگاه</h2>
-    <p>
-      در کارگاه سفالگری گیلانا، ظروف سرامیکی دست‌ساز
-      با توجه به زیبایی سادگی و اصالت هنر سفالگری ساخته می‌شوند.
-    </p>
-  </section>
+  <header>
+    <div class="container header-inner">
 
-  <section>
-    <h2>تماس با گیلانا</h2>
+      <div class="brand">
+        gilaa<span>.na</span>
+      </div>
 
-    <p>
-      اینستاگرام:
-      <a href="https://www.instagram.com/gilaa.na/" target="_blank" rel="noopener noreferrer">
-        @gilaa.na
-      </a>
-    </p>
+      <nav>
+        <a href="#about">درباره کارگاه</a>
+        <a href="#contact">آدرس و تماس</a>
+        <a href="https://www.instagram.com/gilaa.na/"
+           target="_blank"
+           rel="noopener noreferrer">اینستاگرام</a>
+      </nav>
 
-    <p>آدرس کارگاه: در انتظار تکمیل</p>
-    <p>شماره تماس: در انتظار تکمیل</p>
-  </section>
-</main>
+    </div>
+  </header>
 
-<footer>
-  Gilana Pottery Workshop
-</footer>
+  <main>
+
+    <section class="hero">
+      <div class="container hero-inner">
+
+        <span class="eyebrow">GILANA POTTERY WORKSHOP</span>
+
+        <h1>
+          هنر سفال،
+          <br>
+          <span>ساخته‌شده با دست</span>
+        </h1>
+
+        <p>
+          کارگاه سفالگری گیلانا در تالش، گیلان؛
+          ساخت ظروف سرامیکی دست‌ساز با الهام از سادگی،
+          طبیعت و زیبایی.
+        </p>
+
+        <div class="buttons">
+
+          <a class="button button-light" href="#contact">
+            آدرس و شماره تماس
+          </a>
+
+          <a class="button button-outline"
+             href="https://www.instagram.com/gilaa.na/"
+             target="_blank"
+             rel="noopener noreferrer">
+            مشاهده آثار در اینستاگرام
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="intro" id="about">
+      <div class="container">
+
+        <h2 class="section-title">درباره کارگاه گیلانا</h2>
+        <div class="title-line"></div>
+
+        <p>
+          گیلانا کارگاه سفالگری و ساخت ظروف سرامیکی دست‌ساز است.
+          هر اثر با توجه به فرم، جزئیات و زیبایی طراحی و ساخته می‌شود.
+          برای مشاهده آثار و آشنایی بیشتر با محصولات کارگاه،
+          صفحه اینستاگرام گیلانا را دنبال کنید.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+
+        <div class="contact-heading">
+          <h2 class="section-title">آدرس و اطلاعات تماس</h2>
+          <div class="title-line"></div>
+
+          <p>
+            برای هماهنگی سفارش یا مراجعه به کارگاه،
+            از اطلاعات زیر استفاده کنید.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-card">
+            <span class="contact-label">آدرس کارگاه</span>
+
+            <span class="contact-value">
+              گیلان، تالش
+            </span>
+
+            <p class="contact-note">
+              برای دریافت نشانی دقیق و هماهنگی مراجعه، تماس بگیرید.
+            </p>
+          </div>
+
+          <div class="contact-card phone">
+            <span class="contact-label">شماره تماس</span>
+
+            <a class="contact-value"
+               href="tel:09113446314"
+               dir="ltr">
+              09113446314
+            </a>
+
+            <p class="contact-note">
+              برای ارتباط مستقیم با کارگاه تماس بگیرید.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="instagram-card">
+
+          <div>
+            <h3>گیلانا در اینستاگرام</h3>
+            <p>مشاهده ظروف دست‌ساز و آثار جدید کارگاه</p>
+          </div>
+
+          <a class="button"
+             href="https://www.instagram.com/gilaa.na/"
+             target="_blank"
+             rel="noopener noreferrer">
+            @gilaa.na
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+
+      <div class="footer-brand">
+        gilaa<span>.na</span>
+      </div>
+
+      <p>کارگاه سفالگری گیلانا</p>
+      <p>گیلان، تالش</p>
+      <p>هنر دست، زیبایی ماندگار</p>
+
+    </div>
+  </footer>
 
 </body>
 </html>
