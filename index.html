@@ -253,31 +253,55 @@
             font-weight: bold;
         }
 
-        /* Handbuilding Workshop Image */
+        /* Workshop Image With Text Overlay */
 
         .handbuilding-section {
             width: 100%;
             margin: 30px 0;
-            padding: 16px;
-            background: var(--white);
-            border: 1px solid var(--border);
+        }
+
+        .handbuilding-card {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
             border-radius: 16px;
-            text-align: center;
+            background: #e7dfd1;
+            border: 1px solid var(--border);
+            isolation: isolate;
         }
 
         .handbuilding-image {
             display: block;
             width: 100%;
             height: auto;
-            border-radius: 10px;
+            object-fit: contain;
         }
 
-        .handbuilding-section h2 {
-            margin-top: 14px;
-            color: var(--dark);
-            font-size: clamp(20px, 4vw, 28px);
+        .handbuilding-card::after {
+            content: "";
+            position: absolute;
+            inset: 55% 0 0;
+            z-index: 1;
+            background: linear-gradient(
+                to bottom,
+                rgba(35, 27, 18, 0),
+                rgba(35, 27, 18, 0.68)
+            );
+            pointer-events: none;
+        }
+
+        .handbuilding-title {
+            position: absolute;
+            z-index: 2;
+            bottom: 18px;
+            right: 12px;
+            left: 12px;
+            color: #fff;
+            text-align: center;
+            font-size: clamp(19px, 3.5vw, 29px);
             font-weight: bold;
             line-height: 1.9;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
         }
 
         /* Contact */
@@ -422,13 +446,15 @@
             }
 
             .handbuilding-section {
-                padding: 10px;
                 margin: 24px 0;
             }
 
-            .handbuilding-section h2 {
-                font-size: 21px;
-                margin-top: 10px;
+            .handbuilding-title {
+                bottom: 10px;
+                right: 8px;
+                left: 8px;
+                font-size: 20px;
+                line-height: 1.7;
             }
         }
 
@@ -452,6 +478,11 @@
 
             .hero h1 {
                 font-size: 24px;
+            }
+
+            .handbuilding-title {
+                font-size: 17px;
+                bottom: 7px;
             }
         }
     </style>
@@ -500,7 +531,7 @@
                aria-label="WhatsApp">
 
                 <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12.04 2a9.85 9.85 0 0 0-8.45 14.92L2.2 22l5.22-1.37A9.86 9.86 0 1 0 12.04 2zm0 17.96a8.04 8.04 0 0 1-4.1-1.12l-.3-.18-3.1.81.83-3.02-.2-.31a8.07 8.07 0 1 1 6.87 3.82zm4.43-6.05c-.24-.12-1.44-.71-1.67-.79-.23-.08-.39-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.1-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.8-.2-.47-.4-.4-.55-.41h-.47c-.16 0-.42.06-.65.3-.22.24-.85.83-.85 2.03s.87 2.35.99 2.51c.12.16 1.7 2.6 4.12 3.65.57.25 1.02.4 1.37.51.58.18 1.1.15 1.52.09.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/>
+                    <path d="M12.04 2a9.85 9.85 0 0 0-8.45 14.92L2.2 22l5.22-1.37A9.86 9.86 0 1 0 12.04 2zm0 17.96a8.04 8.04 0 0 1-4.1-1.12l-.3-.18-3.1.81.83-3.02-.2-.31a8.07 8.07 0 1 1 6.87 3.82zm4.43-6.05c-.24-.12-1.44-.71-1.67-.79-.23-.08-.39-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.24-.52.12-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.1-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.8-.2-.47-.4-.4-.55-.41h-.47c-.16 0-.42.06-.65.3-.22.24-.85.83-.85 2.03s.87 2.35.99 2.51c.12.16 1.7 2.6 4.12 3.65.57.25 1.02.4 1.37.51.58.18 1.1.15 1.52.09.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/>
                 </svg>
 
             </a>
@@ -588,11 +619,7 @@
                     loading="lazy"
                 >
 
-                <figcaption>
-                    آثار دست‌ساز گیلانا
-                    <br>
-                    Handmade Ceramics
-                </figcaption>
+                <figcaption>آثار دست‌ساز گیلانا</figcaption>
             </figure>
 
             <figure>
@@ -602,11 +629,7 @@
                     loading="lazy"
                 >
 
-                <figcaption>
-                    سفال دست‌ساز گیلانا
-                    <br>
-                    Handmade Pottery
-                </figcaption>
+                <figcaption>سفال دست‌ساز گیلانا</figcaption>
             </figure>
 
             <figure>
@@ -616,11 +639,17 @@
                     loading="lazy"
                 >
 
-                <figcaption>
-                    هنر سفالگری گیلانا
-                    <br>
-                    Gilana Pottery
-                </figcaption>
+                <figcaption>هنر سفالگری گیلانا</figcaption>
+            </figure>
+
+            <figure>
+                <img
+                    src="20230702_093301-01.jpeg"
+                    alt="اثر سفالی دست‌ساز گیلانا"
+                    loading="lazy"
+                >
+
+                <figcaption>سفال دست‌ساز گیلانا</figcaption>
             </figure>
 
         </div>
@@ -632,14 +661,20 @@
     <section class="handbuilding-section"
              aria-label="دوره‌های سفالگری با دست">
 
-        <img
-            class="handbuilding-image"
-            src="Cream%20and%20Brown%20Minimalist%20Watercolor%20Background%20Instagram%20Story_20251208_192854_0000.jpg"
-            alt="فضای هنری کارگاه سفالگری گیلانا"
-            loading="lazy"
-        >
+        <div class="handbuilding-card">
 
-        <h2>برگزاری دوره‌های سفالگری با دست</h2>
+            <img
+                class="handbuilding-image"
+                src="Cream%20and%20Brown%20Minimalist%20Watercolor%20Background%20Instagram%20Story_20251208_192854_0000.jpg"
+                alt="فضای هنری کارگاه سفالگری گیلانا"
+                loading="lazy"
+            >
+
+            <h2 class="handbuilding-title">
+                برگزاری دوره‌های سفالگری با دست
+            </h2>
+
+        </div>
 
     </section>
 
@@ -688,8 +723,6 @@
     </section>
 
 </main>
-
-<!-- Footer -->
 
 <footer>
     <strong>gilaa.na</strong>
