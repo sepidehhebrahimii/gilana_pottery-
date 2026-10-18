@@ -2,382 +2,431 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta name="google-site-verification" content="KH2Y-ZJoHDod-h4gCC48aKJwjxX0GHFy0z8JH9bCCOU" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>گیلانا | Gilana Pottery Studio</title>
-
-<meta name="description" content="کارگاه سفالگری گیلانا در تالش، گیلان؛ تولید سفال دست‌ساز، آموزش سفالگری و برگزاری ورکشاپ‌های هنری.">
-
-<style>
-:root {
-    --cream: #F5F0E5;
-    --white: #FFFCF6;
-    --olive: #596747;
-    --dark: #354331;
-    --brown: #95684E;
-    --text: #292D25;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Tahoma, Arial, sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    line-height: 1.9;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.container {
-    width: min(100% - 32px, 1000px);
-    margin: auto;
-}
-
-/* Header */
-
-header {
-    background: rgba(255,252,246,0.95);
-    border-bottom: 1px solid #e1d8c7;
-}
-
-.header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    padding: 15px 0;
-}
-
-.brand {
-    color: var(--dark);
-    line-height: 1.4;
-}
-
-.brand-en {
-    display: block;
-    direction: ltr;
-    text-align: right;
-    font-family: Georgia, serif;
-    font-size: 29px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.brand-fa {
-    display: block;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.socials {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    direction: ltr;
-}
-
-.social {
-    width: 39px;
-    height: 39px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background: var(--olive);
-    color: white;
-    transition: 0.2s;
-}
-
-.social:hover {
-    background: var(--brown);
-    transform: translateY(-2px);
-}
-
-.social svg {
-    width: 21px;
-    height: 21px;
-    fill: currentColor;
-}
-
-/* Hero */
-
-.hero {
-    padding: 30px 0 22px;
-}
-
-.hero-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
-    align-items: center;
-    background: var(--white);
-    padding: 22px;
-    border-radius: 20px;
-    border: 1px solid #e5dccb;
-}
-
-.hero h1 {
-    font-size: clamp(25px, 4vw, 37px);
-    color: var(--dark);
-    line-height: 1.6;
-    margin-bottom: 7px;
-}
-
-.hero h1 span {
-    display: block;
-    direction: ltr;
-    text-align: right;
-    font-family: Georgia, serif;
-    font-size: 25px;
-    color: var(--brown);
-}
-
-.hero p {
-    font-size: 14px;
-    margin-top: 8px;
-}
-
-.hero-en {
-    direction: ltr;
-    text-align: left;
-    border-top: 1px solid #e8dfd0;
-    padding-top: 10px;
-    margin-top: 12px;
-    color: #5e5d52;
-}
-
-.hero-image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 14px;
-    background: #e7dfd1;
-}
-
-/* Intro */
-
-.intro {
-    background: var(--olive);
-    color: white;
-    padding: 23px;
-    border-radius: 17px;
-    margin: 0 0 24px;
-}
-
-.intro h2 {
-    font-size: 21px;
-    margin-bottom: 6px;
-}
-
-.intro p {
-    font-size: 14px;
-}
-
-.intro-en {
-    direction: ltr;
-    text-align: left;
-    border-top: 1px solid rgba(255,255,255,0.25);
-    margin-top: 12px;
-    padding-top: 12px;
-}
-
-/* Gallery */
-
-.section-title {
-    text-align: center;
-    font-size: 23px;
-    color: var(--dark);
-    margin: 25px 0 15px;
-}
-
-.section-title span {
-    display: block;
-    direction: ltr;
-    font-family: Georgia, serif;
-    font-size: 17px;
-    color: var(--brown);
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.gallery figure {
-    background: var(--white);
-    padding: 9px;
-    border-radius: 15px;
-    border: 1px solid #e5dccb;
-}
-
-.gallery img {
-    display: block;
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.gallery figcaption {
-    text-align: center;
-    padding: 8px 4px 3px;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-/* Contact */
-
-.contact {
-    margin: 25px 0;
-    padding: 23px;
-    background: #e8dfcf;
-    border-radius: 17px;
-    text-align: center;
-}
-
-.contact h2 {
-    color: var(--dark);
-    font-size: 22px;
-}
-
-.contact-en {
-    direction: ltr;
-    font-family: Georgia, serif;
-    color: var(--brown);
-    margin-bottom: 10px;
-}
-
-.contact p {
-    margin: 5px 0;
-    font-size: 15px;
-}
-
-.phone {
-    display: inline-block;
-    direction: ltr;
-    font-size: 19px;
-    font-weight: bold;
-    color: var(--dark);
-    margin: 5px 0;
-}
-
-.contact-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.button {
-    display: inline-block;
-    padding: 8px 17px;
-    background: var(--dark);
-    color: white;
-    border-radius: 8px;
-    font-size: 13px;
-}
-
-.button:hover {
-    background: var(--brown);
-}
-
-/* Footer */
-
-footer {
-    text-align: center;
-    padding: 15px;
-    font-size: 12px;
-    color: #6d6a5e;
-}
-
-footer strong {
-    color: var(--dark);
-}
-
-/* Mobile */
-
-@media (max-width: 650px) {
-    .header-inner {
-        gap: 8px;
-    }
-
-    .brand-en {
-        font-size: 24px;
-    }
-
-    .brand-fa {
-        font-size: 11px;
-    }
-
-    .socials {
-        gap: 6px;
-    }
-
-    .social {
-        width: 34px;
-        height: 34px;
-    }
-
-    .social svg {
-        width: 18px;
-        height: 18px;
-    }
-
-    .hero-box {
-        grid-template-columns: 1fr;
-        padding: 15px;
-        gap: 14px;
-    }
-
-    .hero-image {
-        height: 240px;
-        grid-row: 1;
-    }
-
-    .hero h1 {
-        font-size: 27px;
-    }
-
-    .gallery img {
-        height: 190px;
-    }
-
-    .intro,
-    .contact {
-        padding: 18px;
-    }
-}
-
-@media (max-width: 360px) {
-    .brand-en {
-        font-size: 21px;
-    }
-
-    .social {
-        width: 30px;
-        height: 30px;
-    }
-
-    .gallery img {
-        height: 150px;
-    }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>گیلانا | Gilana Pottery Studio</title>
+
+    <meta name="description" content="کارگاه سفالگری گیلانا در تالش، گیلان؛ تولید سفال دست‌ساز، آموزش سفالگری و برگزاری ورکشاپ‌های هنری.">
+
+    <style>
+        :root {
+            --cream: #F5F0E5;
+            --white: #FFFCF6;
+            --olive: #596747;
+            --dark: #354331;
+            --brown: #95684E;
+            --text: #292D25;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.9;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(100% - 32px, 1000px);
+            margin: auto;
+        }
+
+        /* Header */
+
+        header {
+            background: rgba(255,252,246,0.95);
+            border-bottom: 1px solid #e1d8c7;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            padding: 15px 0;
+        }
+
+        .brand {
+            color: var(--dark);
+            line-height: 1.4;
+        }
+
+        .brand-en {
+            display: block;
+            direction: ltr;
+            text-align: right;
+            font-family: Georgia, serif;
+            font-size: 29px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .brand-fa {
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .socials {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            direction: ltr;
+        }
+
+        .social {
+            width: 39px;
+            height: 39px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: var(--olive);
+            color: white;
+            transition: 0.2s;
+        }
+
+        .social:hover {
+            background: var(--brown);
+            transform: translateY(-2px);
+        }
+
+        .social svg {
+            width: 21px;
+            height: 21px;
+            fill: currentColor;
+        }
+
+        /* Hero */
+
+        .hero {
+            padding: 30px 0 22px;
+        }
+
+        .hero-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            align-items: center;
+            background: var(--white);
+            padding: 22px;
+            border-radius: 20px;
+            border: 1px solid #e5dccb;
+        }
+
+        .hero h1 {
+            font-size: clamp(25px, 4vw, 37px);
+            color: var(--dark);
+            line-height: 1.6;
+            margin-bottom: 7px;
+        }
+
+        .hero h1 span {
+            display: block;
+            direction: ltr;
+            text-align: right;
+            font-family: Georgia, serif;
+            font-size: 25px;
+            color: var(--brown);
+        }
+
+        .hero p {
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        .hero-en {
+            direction: ltr;
+            text-align: left;
+            border-top: 1px solid #e8dfd0;
+            padding-top: 10px;
+            margin-top: 12px;
+            color: #5e5d52;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 14px;
+            background: #e7dfd1;
+        }
+
+        /* Intro */
+
+        .intro {
+            background: var(--olive);
+            color: white;
+            padding: 23px;
+            border-radius: 17px;
+            margin: 0 0 24px;
+        }
+
+        .intro h2 {
+            font-size: 21px;
+            margin-bottom: 6px;
+        }
+
+        .intro p {
+            font-size: 14px;
+        }
+
+        .intro-en {
+            direction: ltr;
+            text-align: left;
+            border-top: 1px solid rgba(255,255,255,0.25);
+            margin-top: 12px;
+            padding-top: 12px;
+        }
+
+        /* Gallery */
+
+        .section-title {
+            text-align: center;
+            font-size: 23px;
+            color: var(--dark);
+            margin: 25px 0 15px;
+        }
+
+        .section-title span {
+            display: block;
+            direction: ltr;
+            font-family: Georgia, serif;
+            font-size: 17px;
+            color: var(--brown);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .gallery figure {
+            background: var(--white);
+            padding: 9px;
+            border-radius: 15px;
+            border: 1px solid #e5dccb;
+        }
+
+        .gallery img {
+            display: block;
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .gallery figcaption {
+            text-align: center;
+            padding: 8px 4px 3px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* Handbuilding workshop background */
+
+        .handbuilding-course {
+            position: relative;
+            min-height: 300px;
+            margin: 28px 0;
+            padding: 24px 16px;
+            border-radius: 16px;
+            overflow: hidden;
+
+            background-image:
+                linear-gradient(
+                    to top,
+                    rgba(35, 27, 18, 0.82) 0%,
+                    rgba(35, 27, 18, 0.28) 45%,
+                    rgba(35, 27, 18, 0.04) 100%
+                ),
+                url("Cream%20and%20Brown%20Minimalist%20Watercolor%20Background%20Instagram%20Story_20251208_192854_0000.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .handbuilding-course h2 {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            color: #fff;
+            font-size: clamp(21px, 4vw, 30px);
+            font-weight: 900;
+            line-height: 1.8;
+            text-align: center;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.9);
+        }
+
+        /* Contact */
+
+        .contact {
+            margin: 25px 0;
+            padding: 23px;
+            background: #e8dfcf;
+            border-radius: 17px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: var(--dark);
+            font-size: 22px;
+        }
+
+        .contact-en {
+            direction: ltr;
+            font-family: Georgia, serif;
+            color: var(--brown);
+            margin-bottom: 10px;
+        }
+
+        .contact p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+
+        .phone {
+            display: inline-block;
+            direction: ltr;
+            font-size: 19px;
+            font-weight: bold;
+            color: var(--dark);
+            margin: 5px 0;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 8px 17px;
+            background: var(--dark);
+            color: white;
+            border-radius: 8px;
+            font-size: 13px;
+        }
+
+        .button:hover {
+            background: var(--brown);
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            color: #6d6a5e;
+        }
+
+        footer strong {
+            color: var(--dark);
+        }
+
+        /* Mobile */
+
+        @media (max-width: 650px) {
+            .header-inner {
+                gap: 8px;
+            }
+
+            .brand-en {
+                font-size: 24px;
+            }
+
+            .brand-fa {
+                font-size: 11px;
+            }
+
+            .socials {
+                gap: 6px;
+            }
+
+            .social {
+                width: 34px;
+                height: 34px;
+            }
+
+            .social svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .hero-box {
+                grid-template-columns: 1fr;
+                padding: 15px;
+                gap: 14px;
+            }
+
+            .hero-image {
+                height: 240px;
+                grid-row: 1;
+            }
+
+            .hero h1 {
+                font-size: 27px;
+            }
+
+            .gallery img {
+                height: 190px;
+            }
+
+            .intro,
+            .contact {
+                padding: 18px;
+            }
+
+            .handbuilding-course {
+                min-height: 240px;
+                padding: 18px 12px;
+            }
+
+            .handbuilding-course h2 {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .brand-en {
+                font-size: 21px;
+            }
+
+            .social {
+                width: 30px;
+                height: 30px;
+            }
+
+            .gallery img {
+                height: 150px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -392,37 +441,31 @@ footer strong {
 
         <div class="socials">
 
-            <!-- Instagram -->
             <a class="social"
                href="https://www.instagram.com/gilaa.na/"
                target="_blank"
                rel="noopener"
                aria-label="Instagram">
-
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7zm5 3a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6zm0 2.2a2.6 2.6 0 1 0 0 5.2 2.6 2.6 0 0 0 0-5.2zm5.1-3.4a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"/>
                 </svg>
             </a>
 
-            <!-- Telegram -->
             <a class="social"
                href="https://t.me/SepidehhEbrahimii"
                target="_blank"
                rel="noopener"
                aria-label="Telegram">
-
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M21.8 3.2 18.5 20c-.25 1.18-.9 1.47-1.83.92l-5.06-3.73-2.44 2.35c-.27.27-.5.5-1.02.5l.36-5.15 9.37-8.47c.41-.36-.09-.56-.64-.2L5.66 13.46.7 11.91c-1.08-.34-1.1-1.08.23-1.6L20.3 2.8c.9-.33 1.68.22 1.5.4z"/>
                 </svg>
             </a>
 
-            <!-- WhatsApp -->
             <a class="social"
                href="https://wa.me/989113446314"
                target="_blank"
                rel="noopener"
                aria-label="WhatsApp">
-
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M12.04 2a9.85 9.85 0 0 0-8.45 14.92L2.2 22l5.22-1.37A9.86 9.86 0 1 0 12.04 2zm0 17.96a8.04 8.04 0 0 1-4.1-1.12l-.3-.18-3.1.81.83-3.02-.2-.31a8.07 8.07 0 1 1 6.87 3.82zm4.43-6.05c-.24-.12-1.44-.71-1.67-.79-.23-.08-.39-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.1-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.8-.2-.47-.4-.4-.55-.41h-.47c-.16 0-.42.06-.65.3-.22.24-.85.83-.85 2.03s.87 2.35.99 2.51c.12.16 1.7 2.6 4.12 3.65.57.25 1.02.4 1.37.51.58.18 1.1.15 1.52.09.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/>
                 </svg>
@@ -470,8 +513,8 @@ footer strong {
         <h2>تولید، آموزش و ورکشاپ</h2>
 
         <p>
-            در کارگاه گیلانا، سفالینه و آثار سرامیکی دست‌ساز با عشق و دقت ساخته می‌شوند.
-            برای آشنایی با دنیای سفالگری، یادگیری تکنیک‌های ساخت و شرکت در
+            در کارگاه گیلانا، ظروف سفالی و سرامیکی مانند ماگ و فنجان، گلدان و مجسمه با عشق و دقت ساخته می‌شوند.
+            برای آشنایی با دنیای سفالگری، یادگیری تکنیک‌های ساخت و تولید و شرکت در
             دوره‌ها و ورکشاپ‌های هنری همراه ما باشید.
         </p>
 
@@ -509,20 +552,15 @@ footer strong {
                 </figcaption>
             </figure>
 
-            <figure>
-                <img
-                    src="Cream%20and%20Brown%20Minimalist%20Watercolor%20Background%20Instagram%20Story_20251208_192854_0000.jpg"
-                    alt="تصویر کرم و قهوه‌ای گیلانا"
-                    loading="lazy"
-                >
-                <figcaption>
-                    دنیای هنری گیلانا
-                    <br>
-                    The World of Gilana
-                </figcaption>
-            </figure>
-
         </div>
+
+    </section>
+
+    <!-- Handbuilding workshop -->
+    <section class="handbuilding-course"
+             aria-label="برگزاری دوره‌های سفالگری با دست">
+
+        <h2>برگزاری دوره‌های سفالگری با دست</h2>
 
     </section>
 
@@ -573,7 +611,7 @@ footer strong {
 <footer>
     <strong>gilaa.na</strong>
     <br>
-    هنر سفالگری با دست و چرخ ، گیلانا
+    هنر سفالگری با دست و چرخ، گیلانا
     <br>
     Gilana Pottery Studio · Talesh, Gilan
 </footer>
