@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta name="google-site-verification" content="KH2Y-ZJoHDod-h4gCC48aKJwjxX0GHFy0z8JH9bCCOU" />
+    <meta name="google-site-verification" content="KH2Y-ZJoHDod-h4gCC48aKJwjxX0GHFy0z8JH9bCCOU">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -163,6 +163,7 @@
             width: 100%;
             height: 300px;
             object-fit: cover;
+            object-position: center;
             border-radius: 14px;
             background: #e7dfd1;
         }
@@ -218,6 +219,7 @@
         }
 
         .gallery figure {
+            min-width: 0;
             background: var(--white);
             padding: 9px;
             border-radius: 15px;
@@ -229,6 +231,7 @@
             width: 100%;
             height: 280px;
             object-fit: cover;
+            object-position: center;
             border-radius: 10px;
         }
 
@@ -243,22 +246,26 @@
 
         .handbuilding-course {
             position: relative;
-            min-height: 300px;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            max-height: 650px;
             margin: 28px 0;
             padding: 24px 16px;
             border-radius: 16px;
             overflow: hidden;
 
+            background-color: var(--cream);
+
             background-image:
                 linear-gradient(
                     to top,
-                    rgba(35, 27, 18, 0.82) 0%,
-                    rgba(35, 27, 18, 0.28) 45%,
-                    rgba(35, 27, 18, 0.04) 100%
+                    rgba(35, 27, 18, 0.75) 0%,
+                    rgba(35, 27, 18, 0.18) 35%,
+                    rgba(35, 27, 18, 0) 65%
                 ),
-                url("Cream%20and%20Brown%20Minimalist%20Watercolor%20Background%20Instagram%20Story_20251208_192854_0000.jpg");
+                url("20230918_123948.jpg");
 
-            background-size: cover;
+            background-size: 100% 100%;
             background-position: center;
             background-repeat: no-repeat;
 
@@ -403,7 +410,10 @@
             }
 
             .handbuilding-course {
-                min-height: 240px;
+                width: 100%;
+                aspect-ratio: 9 / 16;
+                max-height: 600px;
+                min-height: 0;
                 padding: 18px 12px;
             }
 
@@ -549,6 +559,19 @@
                     آثار دست‌ساز گیلانا
                     <br>
                     Handmade Ceramics
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img
+                    src="IMG_20231106_091030_070.jpg"
+                    alt="اثر سفالی دست‌ساز گیلانا"
+                    loading="lazy"
+                >
+                <figcaption>
+                    سفال دست‌ساز گیلانا
+                    <br>
+                    Handmade Pottery
                 </figcaption>
             </figure>
 
